@@ -744,11 +744,11 @@ body {
 }
 .contact-textarea {
     height: 100%;
+    resize: none;
 }
 .contact-field-textarea {
     grid-column: 2/3;
     grid-row: -1/-4;
-    resize: none;
     height: 100%;
 }
 

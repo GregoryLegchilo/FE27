@@ -274,7 +274,9 @@
         height: 380px;
     }
     .contact-form {
-        grid-template-columns: 1fr;
+        /* grid-template-columns: 1fr; */
+        display: flex;
+        flex-flow: column wrap;
     }
     .contact-textarea {
         grid-row: auto;
