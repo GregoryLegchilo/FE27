@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Animation</title>
+</head>
+<body>
+    <section class="card">
+        <div class="wrapper">
+            <div class="card__img">
+                <img class="img-active" src="img/pipette.png" alt="pipette" width="680" height="564">
+                <ul class="card-list">
+                    <li class="card__item">
+                        <i class="card-icon card-crown"></i>
+                    </li>
+                    <li class="card__item">
+                        <i class="card-icon card-fill"></i>
+                    </li>
+                    <li class="card__item">
+                        <i class="card-icon card-hat"></i>
+                    </li>
+                    <li class="card__item">
+                        <i class="card-icon card-scissors"></i>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card__content">
+                <span class="card__text--popular">POPULAR</span>
+                <h4 class="card__title">Paper Eyedroper</h4>
+                <i class="card__star"></i>
+                <p class="card__text">Finally, another approach often cited in debates of scientific skepticism against 
+                    controversial movements like "scientific creationism", is methodological naturalism. 
+                    Its main point is that a difference between natural and supernatural explanations should be made,
+                    and that science should be restricted methodologically to natural explanations.
+                </p>
+                <form action="#" method="get" class="card__form">
+                    <div class="form-field">
+                        <label class="card__label"> Quantity
+                            <input class="input-item" name="cardQuantity" type="number" min="1" max="10">
+                        </label>                        
+                    </div>
+                    <div class="form-field">
+                        <label class="card__label"> Color
+                            <input class="input-color input-color--blue" name="color" type="radio">
+                            <input class="input-color input-color--purple" name="color" type="radio">
+                            <input class="input-color input-color--red" name="color" type="radio">
+                            <input class="input-color input-color--black" name="color" type="radio">
+                            <input class="input-color input-color--green" name="color" type="radio">
+                        </label>                        
+                    </div>
+                    <p class="price-text">$109<b class="price-text--cent">99</b>></p>
+                    <div class="card-bottom">
+                        <i class="ship-icon"></i>
+                        <button class="price-button" type="button">Add to cart</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
