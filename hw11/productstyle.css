@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    margin: 0 auto;
+    padding:0 15px;
+    width: 100%;
+}
+.product{
+    height: 720px;
+    width: 100%;
+    margin: 0 auto;
+    background: url(eyedropp.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+.product__pic{
+    padding-top:246px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+.crown{
+    width:49px ;
+    height:38px ;
+    margin-left: 64px;
+    position: relative;
+}
+.crown::before{
+    content:"";
+    display: block;
+    clear: both;
+    border: 3px solid #DBDBDB;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: -10px;
+    left:13px;
+}
+.fill{
+    width:44px ;
+    height:38px ;
+    margin-left: 73px;
+    position: relative;
+}
+.fill::before{
+    content:"";
+    display: block;
+    clear: both;
+    border: 3px solid #DBDBDB;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: -7px;
+    left:3px;
+}
+.hat{
+    width: 38px;
+    height: 27px;
+    margin-left: 75px;
+    position: relative;
+}
+.hat::before{
+    content:"";
+    display: block;
+    clear: both;
+    border: 3px solid #DBDBDB;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: -10px;
+    left:2px;
+}
+.scissors{
+    width: 38px;
+    height: 38px;
+    margin-left: 83px;
+    position: relative;
+}
+.scissors::before{
+    content:"";
+    display: block;
+    clear: both;
+    border: 3px solid #DBDBDB;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: -8px;
+    left:-8px;
+}
