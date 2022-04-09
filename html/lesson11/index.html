@@ -32,7 +32,7 @@
             </div>
 
             <div class="card__content">
-                <span class="card__text--popular">POPULAR</span>
+                <b class="card__text--popular">POPULAR</b>
                 <h4 class="card__title">Paper Eyedroper</h4>
                 <i class="card__star"></i>
                 <p class="card__text">Finally, another approach often cited in debates of scientific skepticism against 
@@ -42,23 +42,39 @@
                 </p>
                 <form action="#" method="get" class="card__form">
                     <div class="form-field">
-                        <label class="card__label"> Quantity
-                            <input class="input-item" name="cardQuantity" type="number" min="1" max="10">
-                        </label>                        
+                        <label for="input-pc" class="card__label card__label--quantity"> Quantity</label>   
+                            <input id="input-pc" class="input-item" name="cardQuantity" type="number" value="1" min="1" max="10">      
                     </div>
                     <div class="form-field">
-                        <label class="card__label"> Color
-                            <input class="input-color input-color--blue" name="color" type="radio">
-                            <input class="input-color input-color--purple" name="color" type="radio">
-                            <input class="input-color input-color--red" name="color" type="radio">
-                            <input class="input-color input-color--black" name="color" type="radio">
-                            <input class="input-color input-color--green" name="color" type="radio">
-                        </label>                        
+                        <label for="input-color" class="card__label card-color"> Color</label>                                                       
+                        <div class="radio-wrapper">
+                            <div class="radio">
+                                <input class="input-color input-color--blue" name="color" type="radio">
+                                <label for="" class="label-blue"></label>
+                            </div>
+                            <div class="radio">
+                                <input class="input-color input-color--purple" name="color" type="radio">
+                                <label for="" class="label-purple"></label>
+                            </div>
+                            <div class="radio">
+                                <input class="input-color input-color--red" name="color" type="radio">
+                                <label for="" class="label-red"></label>
+                            </div>   
+                            <div class="radio">
+                                <input class="input-color input-color--black" name="color" type="radio">
+                                <label for="" class="label-black"></label>
+                            </div>  
+                            <div class="radio">
+                                <input class="input-color input-color--green" name="color" type="radio" checked>
+                                <label for="" class="label-green"></label>
+                            </div>  
+                        </div>
                     </div>
-                    <p class="price-text">$109<b class="price-text--cent">99</b>></p>
+                    <p class="price-text">$109<b class="price-text--cent">99</b></p>
                     <div class="card-bottom">
                         <i class="ship-icon"></i>
-                        <button class="price-button" type="button">Add to cart</button>
+                        <p class="ship-text">Free shiping</p>
+                        <button class="price-button">Add to cart</button>
                     </div>
                 </form>
             </div>
