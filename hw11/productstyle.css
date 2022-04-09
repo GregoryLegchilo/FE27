@@ -171,3 +171,49 @@ h3{
     color: #9FA3A7;
     margin-bottom:34px ;
 }
+label{
+    font-family: 'Montserrat', 'sans-serif';
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    color: #9FA3A7;  
+}
+input{
+    outline: none;
+    border: 2px solid #EEEEEE;
+    border-radius: 20px;
+    width: 88px;
+    height: 30px;
+    margin-left: 48px;
+    text-align: center;
+    font-family: 'Montserrat', 'sans-serif';
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 2.4px;
+    color: #212121;
+    position: relative;
+}
+a{
+    text-decoration: none;
+}
+.number-minus,
+.number-plus{
+    font-family: 'Montserrat', 'sans-serif';
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    color: #9FA3A7;
+    position: absolute;
+}
+.number-minus{
+    top:408px;
+    right: 360px;
+}
+.number-plus{
+    top:409px;
+    right:310px;
+}
