@@ -10,13 +10,13 @@
 }
 .product{
     width: 100%;
-    height: 720px;
     margin: 0 auto;
 }
-/* body{
+/*animation body*/
+ /* body{
     background: linear-gradient(-45deg, #57B9BB, #FFC80A, indianred, mediumspringgreen );
-    animation: gradient 15s ease infinite;
-    background-size: 500% 500%;
+    animation: gradient 15s ease 1;
+    background-size: 400% 400%;
 }
 @keyframes gradient{
     0% {
@@ -34,20 +34,20 @@
     100%{
         background-position: 0% 25%;
     }
-    
-
-} */
+}  */
 ul, li{
     list-style-type: none;
 }
 .product__wrapper{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 40px;
 }
-.product__wrapper-pic{
+.product__pic{
     padding-top: 138px;
 }
 .dropp{
+    padding-top: 138px;
     background-image: url(eyedropp.png);
     width: 680px;
     height: 564px;
@@ -59,8 +59,6 @@ ul, li{
 .picture{
     display: flex;
     flex-direction: column;
-}
-.picture{
     position: relative;
     bottom: 440px;
     left:0;
@@ -87,15 +85,15 @@ ul, li{
     }
 }
 .crown{
+    background-image: url(crowncard.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
     width:49px ;
     height:38px ;
     margin-left: 64px;
     margin-bottom: 16px;
-    position: relative;
-    background-image: url(crowncard.png);
-    background-position: top right;
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 .crown::before{
     content:"";
@@ -114,11 +112,11 @@ ul, li{
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    position: relative;
     width:39px ;
     height:32px ;
     margin-left: 73px;
     margin-bottom:29px ;
-    position: relative;
 }
 .fill::before{
     content:"";
@@ -137,11 +135,11 @@ ul, li{
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    position: relative;
     width: 38px;
     height: 27px;
     margin-left: 75px;
     margin-bottom: 28px;
-    position: relative;
 }
 .hat::before{
     content:"";
@@ -160,10 +158,10 @@ ul, li{
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    position: relative;
     width: 23px;
     height: 25px;
     margin-left: 84px;
-    position: relative;
 }
 .scissors::before{
     content:"";
@@ -177,7 +175,7 @@ ul, li{
     top: -8px;
     left:-8px;
 }
-.product__wrapper-paper{
+.product__paper{
     padding-top: 78px;
 }
 .popular{
@@ -207,6 +205,13 @@ h3{
 }
 .path{
     margin-bottom: 35px;
+    width: 87px;
+    height: 13px;
+    background-image: url(shape.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
 }
 .description{
     font-family: 'Open Sans', 'sans-serif';
@@ -215,6 +220,9 @@ h3{
     line-height: 26px;
     color: #9FA3A7;
     margin-bottom:34px ;
+}
+.quantity{
+    margin-bottom: 30px;
 }
 label{
     font-family: 'Montserrat', 'sans-serif';
@@ -261,10 +269,8 @@ a{
     top:3px;
     right:50px;
 }
-.quantity{
-    margin-bottom: 30px;
-}
 .color{
+    margin-bottom: 43px;
     position: relative;
 }
 .colorfix .blue,
@@ -285,6 +291,23 @@ a{
     left: 130px;
     background: #57B9BB;
     border-radius: 50%;
+}
+.colorfix .blue:checked + span{
+    width: 16px;
+    height: 16px;
+    top:1px;
+}
+.colorfix .blue:checked + span::before{
+    content: "";
+    clear: both;
+    display: block;
+    border: 3px solid #D8D8D8;
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    position: absolute;
+    top:-9px;
+    left:-10px;
 }
 .colorfix .violet + span{
     position: absolute;
@@ -313,14 +336,6 @@ a{
     background: #292929;
     border-radius: 50%;
 }
-.colorfix .blue + span:hover,
-.colorfix .violet + span:hover,
-.colorfix .red + span:hover,
-.colorfix .black + span:hover{
-    width: 16px;
-    height: 16px;
-    top:1px;
-}
 
 .colorfix .green + span{
     position: absolute;
@@ -331,7 +346,7 @@ a{
     background:  #8AE02B;
     border-radius: 50%;
 }
-.colorfix .green + span::before{
+.colorfix .green + span:before{
     content: "";
     clear: both;
     display: block;
@@ -376,18 +391,18 @@ a{
     cursor: pointer;
 }
 .free-shipping:hover{
-    -webkit-animation: motion 4s ease 2;
-    animation:motion 4s ease 2;
+    -webkit-animation: motion 4s linear 2;
+    animation:motion 4s linear 2;
     border-radius: 10px;
     background: linear-gradient(-45deg, #57B9BB, #FFC80A, darkorchid);
 }
 @keyframes motion{
-    0%{-webkit-transform: translateX(100px);
-        transform: translate(100px);
+    0%{
+        -webkit-transform: translateX(0px);
+        transform: translate(0px);
     }
-    50%{
-        -webkit-transform: translateX(-50px);
-        transform: translate(-50px);
+    30%{-webkit-transform: translateX(100px);
+        transform: translate(100px);
     }
     100%{
         -webkit-transform: translateX(0);
