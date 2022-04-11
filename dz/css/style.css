@@ -93,6 +93,7 @@ input::-moz-placeholder {
     font-weight: 600;
     text-transform: capitalize;
     color: #FFFFFF;
+    cursor: pointer;
 }
 .button_started,
 .button_message {
@@ -132,6 +133,10 @@ input::-moz-placeholder {
     justify-content: space-between;
     align-items: center;
 }
+.header__logo a {
+    display: block;
+    height: 100%;
+}
 .header__menu ul {    
     display: flex;
 }
@@ -150,12 +155,114 @@ input::-moz-placeholder {
     line-height: 19px;
     color: #FFFFFF;
 }
+
 .header__menu li a:hover {
     background: #EC7979;
 }
 .header__menu li a:active {    
     background: #AB4949;
 }
+.hidden-menu,
+.check-menu {
+    display: none;
+}
+.burger-menu {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 39px;
+    cursor: pointer;
+    width: 35px;
+    height: 23px;
+    z-index: 2;
+}
+.burger-line {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    transition: 1s ease;
+}
+.ln1 {top: 0px;}
+.ln2, .ln3 {    
+    top: 50%;
+    transform: translateY(-50%);
+}
+.ln4 {bottom: 0px; right: 0;}
+.nav-toggle {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    font-size: 0;
+    width: 100%;
+    transform: translateY(100%);
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.5) url(../image/banner.png);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+.nav-toggle ul {
+    padding-top: 60px;
+}
+.nav-toggle ul li a {
+    position: relative;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    font-size: inherit;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin: 0 auto 50px;
+    height: 40px;
+}
+.nav-toggle a:after {
+    content: "";
+    display: block;
+    clear: both;
+    width: 100%;
+    height: 2px;
+    background-color: #EC7979;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.nav-toggle a::before {
+    content: "";
+    display: block;
+    clear: both;
+    width: 100%;
+    height: 2px;
+    background-color: #EC7979;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.check-menu:checked ~ .nav-toggle {
+    height: 949px;
+    font-size: 14px;
+    transition: font-size 0.7s ease;
+}
+.check-menu:checked ~ .nav-toggle a:after,
+.check-menu:checked ~ .nav-toggle a:before {
+    width: 0;
+    transition: 0.7s ease 0.3s;
+}
+.check-menu:checked + .burger-menu .ln1,
+.check-menu:checked + .burger-menu .ln4 {
+    width: 0;
+    background-color:#AB4949;
+}
+.check-menu:checked + .burger-menu .ln2 {transform: rotate(45deg);}
+.check-menu:checked + .burger-menu .ln3 {transform: rotate(-45deg);}
+
 
 /*SECTION BANNER*/
 .banner {
@@ -202,7 +309,6 @@ h1 {
     color: #FFFFFF;
     margin-bottom: 0;
 }
-
 .banner .button_download-clear {
     width: 40.3%;
 }
@@ -238,10 +344,8 @@ h1 {
     margin: 0 auto;
 }
 .form-field-bn {
-    border-bottom: 1px solid #BDBDBD;
-    padding-bottom: 16px;
+   height: 38px;
 }
-
 .input-bn-name,
 .input-bn-email,
 .input-bn-password {
@@ -252,6 +356,12 @@ h1 {
     font-size: 14px;
     line-height: 19px;
     width: 100%;
+    border-bottom: 1px solid #BDBDBD;
+}
+.input-bn-name::placeholder,
+.input-bn-email::placeholder,
+.input-bn-password::placeholder {
+    padding-bottom: 16px;
 }
 .button_started {
     width: 100%;
@@ -352,6 +462,7 @@ h4.design__item-subtitle {
 .options__version {
     width: 31.62%;
     transition: 0.4s ease;
+    cursor: pointer;
 }
 .options__version:hover {
     transform: translateY(-20px);
@@ -506,8 +617,7 @@ h4.design__item-subtitle {
     height: 211px;
 }
 .form-field-cnt {
-    border-bottom: 1px solid #BDBDBD;
-    padding-bottom: 16px;
+    height: 38px;
 }
 .input-cnt-name,
 .input-cnt-email,
@@ -520,14 +630,22 @@ h4.design__item-subtitle {
     font-weight: 400;
     font-size: 14px;
     line-height: 19px;
+    border-bottom: 1px solid #BDBDBD;
+}
+.input-cnt-name::placeholder,
+.input-cnt-email::placeholder,
+.input-cnt-password::placeholder {
+    padding-bottom: 16px;
 }
 .form-field-textarea {
     height: 211px;
     width: 48.63%;
-    border-bottom: 1px solid #BDBDBD;
 }
 .textarea-cnt-msg {
     resize: none;
+    border-bottom: 1px solid #BDBDBD;
+    width: 100%;
+    height: 100%;
 }
 .button_message {
     width: 23%;
