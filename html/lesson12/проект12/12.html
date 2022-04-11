@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap"
+      rel="stylesheet">
+   <link rel="stylesheet" href="./css/12.css">
+   <title>Paper Eyedroper</title>
+</head>
+
+<body>
+   <section class="wrapper">
+      <div class="picture">
+         <ul class="picture__item">
+            <li class="picture__itemico crown"></li>
+            <li class="picture__itemico fill"></li>
+            <li class="picture__itemico hat"></li>
+            <li class="picture__itemico scissors"></li>
+         </ul>
+      </div>
+
+      <div class="data">
+         <div class="popular">
+            <p>popular</p>
+         </div>
+         <p class="bigtext">paper eyedroper</p>
+         <img src="./img/star.svg" alt="звезда">
+         <p class="smalltext">Finally, another approach often cited in debates of scientific skepticism against controversial movements
+            like "scientific creationism", is methodological naturalism. Its main point is that a difference between
+            natural and supernatural explanations should be made, and that science should be restricted methodologically
+            to natural explanations.</p>
+         <div class="quanity">
+            <p class="graytext">quanity</p>
+            <div class="number">
+               <button class="number-minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
+               <input type="number" min="0" max="10" value="1" readonly>
+               <button class="number-plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
+            </div>
+         </div>
+         <div class="quanity radiocol">
+            <p class="graytext">color</p>
+               <div class="radiobutton">
+                  <label class="rad-label">
+                     <input type="radio" class="rad-input" name="rad" value="green">
+                     <div class="rad-design-gr"></div>                    
+                  </label>
+                  <label class="rad-label">
+                     <input type="radio" class="rad-input" name="rad" value="violet">
+                     <div class="rad-design-vi"></div>                    
+                  </label>                
+                  <label class="rad-label">
+                     <input type="radio" class="rad-input" name="rad" value="red">
+                     <div class="rad-design-re"></div>                    
+                  </label>                
+                  <label class="rad-label">
+                     <input type="radio" class="rad-input" name="rad" value="black">
+                     <div class="rad-design-bl"></div>                    
+                  </label>
+                  <label class="rad-label">
+                     <input type="radio" class="rad-input" name="rad" value="light-green" checked>
+                     <div class="rad-design-li"></div>                    
+                  </label>                
+               </div>
+
+         </div>
+         <p class="bigtext end">$109<sup>99</sup></p>
+         <div class="dispatch">
+            <p class="graytext bus">free shipping</p>
+            <button class="btn">add to cart</button>
+         </div>
+      </div>
+
+   </section>
+</body>
+
+</html>
