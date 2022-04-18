@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+}
+.image{
+    width: 680px;
+    height: 564px;
+    background-image: url("../image/Eyedropper.png");
+}
+.product{
+    display: flex;
+    width: 1280px;
+    height: 720px;
+    padding-top: 78px;
+    padding-bottom: 18px;
+}
